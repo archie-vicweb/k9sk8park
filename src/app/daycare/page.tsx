@@ -79,6 +79,40 @@ export default function Daycare() {
         </div>
       </section>
 
+      {/* Photo Gallery */}
+      <section className="py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our K9 SK8 Park Family</h2>
+            <p className="text-xl text-gray-600">
+              Some of our furry friends having fun at daycare!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+            {Array.from({ length: 18 }, (_, index) => (
+              <div 
+                key={index}
+                className="aspect-square bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center group cursor-pointer"
+              >
+                <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                  🐕
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-lg font-medium text-gray-700 mb-4">
+              <strong>Some of our K9 SK8 Park Family having fun!</strong>
+            </p>
+            <p className="text-gray-600">
+              Your dog could be next to join our happy, active daycare community!
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Requirements Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
