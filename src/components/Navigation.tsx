@@ -1,36 +1,81 @@
+'use client';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar bg-white shadow-lg sticky top-0 z-50">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16"></path>
-            </svg>
+    <nav className="bg-white shadow-md fixed w-full z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link href="/" className="text-2xl font-bold text-purple-600">
+            K9SK8park
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-purple-600 transition-colors">
+              Home
+            </Link>
+            <Link href="/about" className="text-gray-700 hover:text-purple-600 transition-colors">
+              The Idea
+            </Link>
+            <Link href="/services" className="text-gray-700 hover:text-purple-600 transition-colors">
+              Daycare
+            </Link>
+            <Link href="/grooming" className="text-gray-700 hover:text-purple-600 transition-colors">
+              Parkway Grooming
+            </Link>
+            <Link href="/pricing" className="text-gray-700 hover:text-purple-600 transition-colors">
+              Prices
+            </Link>
+            <Link href="/photos" className="text-gray-700 hover:text-purple-600 transition-colors">
+              Photos
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-purple-600 transition-colors">
+              Contact
+            </Link>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/pricing">Pricing</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
-        <Link href="/" className="btn btn-ghost normal-case text-xl font-bold text-primary">
-          🐕 K9 SK8 Park
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><Link href="/services" className="font-medium">Services</Link></li>
-          <li><Link href="/about" className="font-medium">About</Link></li>
-          <li><Link href="/pricing" className="font-medium">Pricing</Link></li>
-          <li><Link href="/contact" className="font-medium">Contact</Link></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <Link href="/book" className="btn btn-primary text-white">Book Session</Link>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden pb-4">
+            <Link href="/" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              Home
+            </Link>
+            <Link href="/about" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              The Idea
+            </Link>
+            <Link href="/services" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              Daycare
+            </Link>
+            <Link href="/grooming" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              Parkway Grooming
+            </Link>
+            <Link href="/pricing" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              Prices
+            </Link>
+            <Link href="/photos" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              Photos
+            </Link>
+            <Link href="/contact" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+              Contact
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );
