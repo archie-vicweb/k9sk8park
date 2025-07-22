@@ -48,7 +48,7 @@ export default function Grooming() {
               {/* Services Description */}
               <div className="lg:col-span-2">
                 <h3 className="text-2xl font-bold text-purple-600 mb-4">
-                  <span className="text-purple-500 italic">Quality over quantity</span><span className="text-gray-800">!</span>
+                  <span className="text-purple-500 italic">Quality over quantity</span>
                 </h3>
                 
                 <div className="prose prose-lg max-w-none space-y-4">
