@@ -26,8 +26,8 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Speak directly with our team for immediate assistance
                 </p>
-                <a href="tel:+15551234567" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
-                  (555) 123-DOGS
+                <a href="tel:+17782652002" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
+                  1-778-265-2002
                 </a>
                 <p className="text-sm text-gray-500 mt-2">
                   Available during business hours
@@ -43,8 +43,8 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Send us a message and we&apos;ll get back to you within 2 hours
                 </p>
-                <a href="mailto:hello@k9sk8park.com" className="text-xl font-bold text-blue-600 hover:text-blue-800">
-                  hello@k9sk8park.com
+                <a href="mailto:K9Sk8park@outlook.com" className="text-xl font-bold text-blue-600 hover:text-blue-800">
+                  K9Sk8park@outlook.com
                 </a>
                 <p className="text-sm text-gray-500 mt-2">
                   We respond quickly!
@@ -60,11 +60,46 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Quick questions? Send us a text message anytime
                 </p>
-                <a href="sms:+15551234567" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
-                  (555) 123-DOGS
+                <a href="sms:+17782652002" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
+                  1-778-265-2002
                 </a>
                 <p className="text-sm text-gray-500 mt-2">
                   24/7 text support available
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Visit Our Location</h2>
+            <p className="text-xl text-gray-600">
+              Come see our facility and meet our team in person
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <div className="card bg-white shadow-xl">
+              <div className="card-body text-center">
+                <div className="text-5xl mb-4">📍</div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">K9 SK8 Park</h3>
+                <p className="text-xl text-gray-700 font-medium mb-4">
+                  1047 Langford Parkway, Unit 136
+                </p>
+                <a 
+                  href="https://maps.google.com/?q=1047+Langford+Parkway+Unit+136" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Get Directions
+                </a>
+                <p className="text-sm text-gray-500 mt-4">
+                  Free parking available on-site
                 </p>
               </div>
             </div>
@@ -202,10 +237,10 @@ export default function Contact() {
                 <div className="card-body">
                   <h3 className="text-xl font-bold text-red-800 mb-4">Emergency Contact</h3>
                   <p className="text-red-700 text-sm mb-4">
-                    For existing clients with urgent fitness needs or health concerns during sessions:
+                    For existing clients with urgent daycare needs or health concerns:
                   </p>
-                  <a href="tel:+15551234911" className="text-xl font-bold text-red-600 hover:text-red-800">
-                    (555) 123-4911
+                  <a href="tel:+17782652002" className="text-xl font-bold text-red-600 hover:text-red-800">
+                    1-778-265-2002
                   </a>
                   <p className="text-xs text-red-600 mt-2">
                     Emergency line - existing clients only
@@ -278,11 +313,10 @@ export default function Contact() {
 
           <div className="flex justify-center space-x-8">
             {[
-              { name: "Instagram", icon: "📷", handle: "@k9sk8park" },
-              { name: "Facebook", icon: "👥", handle: "K9 SK8 Park" },
-              { name: "TikTok", icon: "🎵", handle: "@k9sk8park" }
+              { name: "Instagram", icon: "📷", handle: "@K9SK8park", url: "https://www.instagram.com/K9SK8park" },
+              { name: "Facebook", icon: "👥", handle: "K9SK8park", url: "https://www.facebook.com/K9SK8park" }
             ].map((social, index) => (
-              <a key={index} href="#" className="text-center hover:scale-105 transition-transform">
+              <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="text-center hover:scale-105 transition-transform">
                 <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center text-3xl mx-auto mb-2 shadow-lg hover:shadow-xl">
                   {social.icon}
                 </div>
@@ -294,7 +328,7 @@ export default function Contact() {
 
           <div className="text-center mt-12">
             <p className="text-lg text-gray-600 mb-4">
-              Share your dog&apos;s fitness journey with #K9SK8Park for a chance to be featured!
+              Share your dog&apos;s daycare journey with #K9SK8Park for a chance to be featured!
             </p>
           </div>
         </div>
