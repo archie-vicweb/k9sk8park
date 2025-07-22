@@ -90,7 +90,7 @@ export default function Home() {
                 Indoor off-leash dog park featuring ramps, tunnels and slides for your dog to build confidence while having fun!
               </p>
               <Link 
-                href="/services" 
+                href="/daycare" 
                 className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Learn More

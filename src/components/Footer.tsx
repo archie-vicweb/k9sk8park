@@ -38,7 +38,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-2 text-sm mb-6">
               <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
               <Link href="/about" className="hover:text-purple-400 transition-colors">The Idea</Link>
-              <Link href="/services" className="hover:text-purple-400 transition-colors">Daycare</Link>
+              <Link href="/daycare" className="hover:text-purple-400 transition-colors">Daycare</Link>
               <Link href="/grooming" className="hover:text-purple-400 transition-colors">Grooming</Link>
               <Link href="/pricing" className="hover:text-purple-400 transition-colors">Prices</Link>
               <Link href="/photos" className="hover:text-purple-400 transition-colors">Photos</Link>

@@ -22,7 +22,7 @@ export default function Navigation() {
             <Link href="/about" className="text-gray-700 hover:text-purple-600 transition-colors">
               The Idea
             </Link>
-            <Link href="/services" className="text-gray-700 hover:text-purple-600 transition-colors">
+            <Link href="/daycare" className="text-gray-700 hover:text-purple-600 transition-colors">
               Daycare
             </Link>
             <Link href="/grooming" className="text-gray-700 hover:text-purple-600 transition-colors">
@@ -59,7 +59,7 @@ export default function Navigation() {
             <Link href="/about" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
               The Idea
             </Link>
-            <Link href="/services" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
+            <Link href="/daycare" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
               Daycare
             </Link>
             <Link href="/grooming" className="block py-2 text-gray-700 hover:text-purple-600 transition-colors">
