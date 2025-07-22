@@ -78,50 +78,39 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="card bg-white shadow-xl">
-              <div className="card-body">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
+                              <div className="card-body">
+                  <h2 className="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                  <form>
+                    <fieldset className="fieldset space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text font-medium">First Name *</span>
-                      </label>
-                      <input type="text" placeholder="John" className="input input-bordered" required />
+                    <div className="w-full">
+                      <span className="label font-medium text-gray-700 block pb-2">First Name *</span>
+                      <input type="text" placeholder="John" className="input input-bordered w-full" required />
                     </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text font-medium">Last Name *</span>
-                      </label>
-                      <input type="text" placeholder="Doe" className="input input-bordered" required />
+                    <div className="w-full">
+                      <span className="label font-medium text-gray-700 block pb-2">Last Name *</span>
+                      <input type="text" placeholder="Doe" className="input input-bordered w-full" required />
                     </div>
                   </div>
 
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-medium">Email Address *</span>
-                    </label>
-                    <input type="email" placeholder="john@example.com" className="input input-bordered" required />
+                  <div className="w-full">
+                    <span className="label font-medium text-gray-700 block pb-2">Email Address *</span>
+                    <input type="email" placeholder="john@example.com" className="input input-bordered w-full" required />
                   </div>
 
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-medium">Phone Number</span>
-                    </label>
-                    <input type="tel" placeholder="(555) 123-4567" className="input input-bordered" />
+                  <div className="w-full">
+                    <span className="label font-medium text-gray-700 block pb-2">Phone Number</span>
+                    <input type="tel" placeholder="(555) 123-4567" className="input input-bordered w-full" />
                   </div>
 
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-medium">Dog&apos;s Name</span>
-                    </label>
-                    <input type="text" placeholder="Buddy" className="input input-bordered" />
+                  <div className="w-full">
+                    <span className="label font-medium text-gray-700 block pb-2">Dog&apos;s Name</span>
+                    <input type="text" placeholder="Buddy" className="input input-bordered w-full" />
                   </div>
 
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-medium">Service Interest</span>
-                    </label>
-                    <select className="select select-bordered">
+                  <div className="w-full">
+                    <span className="label font-medium text-gray-700 block pb-2">Service Interest</span>
+                    <select className="select select-bordered w-full">
                       <option disabled selected>Choose a service...</option>
                       <option>Single Session</option>
                       <option>4-Session Package</option>
@@ -131,30 +120,27 @@ export default function Contact() {
                     </select>
                   </div>
 
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-medium">Message *</span>
-                    </label>
+                  <div className="w-full">
+                    <span className="label font-medium text-gray-700 block pb-2">Message *</span>
                     <textarea 
-                      className="textarea textarea-bordered h-32" 
+                      className="textarea textarea-bordered h-32 w-full" 
                       placeholder="Tell us about your dog and what you'd like to know..."
                       required
                     ></textarea>
                   </div>
 
-                  <div className="form-control">
-                    <label className="label cursor-pointer justify-start space-x-3">
-                      <input type="checkbox" className="checkbox checkbox-primary" />
-                      <span className="label-text">
-                        I&apos;d like to receive updates about K9 SK8 Park services and promotions
-                      </span>
-                    </label>
+                  <div className="flex items-center space-x-3 py-4">
+                    <input type="checkbox" className="checkbox checkbox-primary mt-1" />
+                    <span className="text-sm">
+                      I&apos;d like to receive updates about K9 SK8 Park services and promotions
+                    </span>
                   </div>
 
                   <button type="submit" className="btn btn-primary btn-lg w-full">
                     Send Message
                   </button>
-                </form>
+                </fieldset>
+              </form>
               </div>
             </div>
 
